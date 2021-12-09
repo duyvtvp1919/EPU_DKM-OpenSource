@@ -37,13 +37,13 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="custom.css">
     
-    <title>GadgetsPick</title>
+    <title>Ối dồi ôi</title>
 </head>
 <body>
     <header class="head">
         <nav class="navbar navbar-dark navbar-expand-md bg-primary justify-content-between">
             <a class="navbar-brand" href="index.php">
-                GadgetsPick
+                Ối dồi ôi
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
