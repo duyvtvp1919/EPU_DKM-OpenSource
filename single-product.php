@@ -164,9 +164,9 @@ function favor(id){
                             <span class="badge badge-primary"><?php echo $q['rating'];?> <li class="fa fa-star"></li></span> <?php echo $q['reviewsNo'];?> Ratings & reviews
                     </div>
                     <div class="price">
-                            <h6 class="text-dark"><span class="text-secondary">Our-Price: </span>&#8377; <?php echo $q['newPrice']; ?></h6>
-                            <h6  class="text-secondary">MRP: <strike class="text-danger"><span  class="text-dark"> &#8377; <?php echo $q['oldPrice']; ?></span></strike></h6>
-                            <h6 class="text-dark"><span class="text-secondary">You Save: </span>&#8377; <?php echo $q['oldPrice']-$q['newPrice']; ?></h6>
+                            <h6 class="text-dark"><span class="text-secondary">Our-Price: </span>&#8363; <?php echo $q['newPrice']; ?></h6>
+                            <h6  class="text-secondary">MRP: <strike class="text-danger"><span  class="text-dark"> &#8363; <?php echo $q['oldPrice']; ?></span></strike></h6>
+                            <h6 class="text-dark"><span class="text-secondary">You Save: </span>&#8363; <?php echo $q['oldPrice']-$q['newPrice']; ?></h6>
                             
                     </div>
                     <div class="stock">
@@ -236,7 +236,7 @@ function favor(id){
                                 
                             </div>
                             <h6 class="card-text p-0 my-1"><?php echo $qrp['category'];?></h6>
-                            <h5 class="card-price p-0 m-0 mb-2"> &#8377; <?php echo $qrp['newPrice'];?> <strike class="text-danger"><small class="text-secondary"> &#8377; <?php echo $qrp['oldPrice'];?></small></strike> </h5>
+                            <h5 class="card-price p-0 m-0 mb-2"> &#8363; <?php echo $qrp['newPrice'];?> <strike class="text-danger"><small class="text-secondary"> &#8363; <?php echo $qrp['oldPrice'];?></small></strike> </h5>
                             <a href="<?php echo 'single-product.php?id='.$qrp['id']; ?>" class="btn btn-primary px-5">View</a>
                         </div>
                     </div>
@@ -263,7 +263,7 @@ function favor(id){
                                 
                             </div>
                             <h6 class="card-text p-0 my-1"><?php echo $qrp['category'];?></h6>
-                            <h5 class="card-price p-0 m-0 mb-2"> &#8377; <?php echo $qrp['newPrice'];?> <strike class="text-danger"><small class="text-secondary"> &#8377; <?php echo $qrp['oldPrice'];?></small></strike> </h5>
+                            <h5 class="card-price p-0 m-0 mb-2"> &#8363; <?php echo $qrp['newPrice'];?> <strike class="text-danger"><small class="text-secondary"> &#8363; <?php echo $qrp['oldPrice'];?></small></strike> </h5>
                             <a href="<?php echo 'single-product.php?id='.$qrp['id']; ?>" class="btn btn-primary px-5">View</a>
                         </div>
                     </div>
@@ -312,7 +312,8 @@ function favor(id){
     <div class="qa mb-4 bg-dark  text-light p-3 rounded">
                 <?php 
                     if(isset($_POST['quesSubmit'])){
-                        $ques=mysql_real_escape_string($_POST['text']);
+                        //$ques=mysql_real_escape_string($_POST['text']);
+                        $ques=mysqli_real_escape_string($_POST['text']);
                         //$date= date("Y-m-d");
                         mysqli_query($conn,"insert into qatb(`question`,`productId`) values('$ques',$id)") or die(mysqli_error($conn));
                     }
@@ -359,7 +360,8 @@ function favor(id){
                     if(isset($_POST['submitRev'])){
                         if($login==true){
                             $star=$_POST['rating'];
-                            $review=mysql_real_escape_string($_POST['reviewText']);
+                            //$review=mysql_real_escape_string($_POST['reviewText']);
+                            $review=mysqli_real_escape_string($_POST['reviewText']);
                             $date= date("Y-m-d");
                             mysqli_query($conn,"insert into reviews(`userid`,`rating`,`reviewDetails`,`date`,`productid`) values($uid,$star,'$review','$date',$id)") or die(mysqli_error($conn));
                             echo "<script>window.open(window.location.href,'_self')</script>";

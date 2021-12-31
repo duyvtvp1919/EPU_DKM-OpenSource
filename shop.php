@@ -370,8 +370,8 @@ function favor(id){
                             ?>"></span></a>
                         </div>
                         <div class="price text-center">
-                            <h3 class="text-dark"> &#8377; <?php echo $q['newPrice'];?></h3>
-                            <strike class="text-danger"><h3 class="text-secondary"><small> &#8377; <?php echo $q['oldPrice'];?></small></h3></strike>
+                            <h3 class="text-dark"> &#8363; <?php echo $q['newPrice'];?></h3>
+                            <strike class="text-danger"><h3 class="text-secondary"><small> &#8363; <?php echo $q['oldPrice'];?></small></h3></strike>
                         </div>
                     </div>  
                 </div>

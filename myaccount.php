@@ -321,7 +321,7 @@ function removeFromCart(id){
                                         ?>
                                         <th colspan="2"> 
                                             <ul class="pull-right">
-                                                <li class="price-box"><span class="mx-2">Tổng tiền</span> <span class="price text-danger">₹</span><span  id="price" class="price text-danger"><?php echo @$t;?></span></li>
+                                                <li class="price-box"><span class="mx-2">Tổng tiền</span> <span class="price text-danger">&#8363;</span><span  id="price" class="price text-danger"><?php echo @$t;?></span></li>
                                             </ul>
                                         </th>
                                     </tr>

@@ -2,24 +2,26 @@
   include '../conn.inc.php';
   $qp=mysqli_query($conn,"select post from posted");
   $qp=mysqli_fetch_assoc($qp)['post'];
-
+  //$qp='{\"surl\":\"http://nhom25.000webhostapp.com/payu/success.php\",\"furl\":\"http://nhom25.000webhostapp.com/payu/failure.php\",\"amount\":75324,\"firstname\":\"Customer\",\"lastname\":\"2\",\"email\":\"customer2@customer.com\",\"phone\":\"123123\",\"productinfo\":\"Lenovo Ideapad 330 Intel Core i5 8th Gen 15.6-inch Full HD Laptop (4GB + 16GB Optane/1TB HDD/Windows 10 Home/Onyx Black/ 2.2kg), 81DE021HIN\",\"address1\":\"Dia chi 1\",\"address2\":\"Dia chi 2\",\"city\":\"Hoang Quoc Viet\",\"state\":\"Hanoi\",\"country\":\"VietNam\",\"zipcode\":\"123\"}';
   $posted=json_decode($qp,TRUE);
+  
 
 
 $MERCHANT_KEY = "BMjMcPRe";
 $SALT = "YSm0MskVKa";
 // Merchant Key and Salt as provided by Payu.
 
+// $PAYU_BASE_URL = "https://test.payu.in";
 $PAYU_BASE_URL = "https://sandboxsecure.payu.in";		// For Sandbox Mode
 //$PAYU_BASE_URL = "https://secure.payu.in";			// For Production Mode
 
 $action = '';
 
 // $posted = array();
-// $posted['surl']='http://localhost/project/payu/success.php';
-// $posted['furl']='http://localhost/project/payu/failure.php';
-// $posted['surl']='http://localhost/project/payu/success.php';
-// $posted['furl']='http://localhost/project/payu/failure.php';
+// $posted['surl']='http://nhom25.000webhostapp.com/payu/success.php';
+// $posted['furl']='http://nhom25.000webhostapp.com/failure.php';
+// $posted['surl']='http://nhom25.000webhostapp.com/success.php';
+// $posted['furl']='http://nhom25.000webhostapp.com/failure.php';
 // $posted['amount']=$total;
 // $posted['firstname']=$user['firstName'];
 // $posted['lastname']=$user['lastName'];
@@ -85,7 +87,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
   $hash = $posted['hash'];
   $action = $PAYU_BASE_URL . '/_payment';
 }
-?>
+?> 
 <html>
   <head>
     <style>

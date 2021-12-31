@@ -36,13 +36,13 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     
-    <title>Ối dồi ôi</title>
+    <title>DMs Store</title>
 </head>
 <body>
     <header class="head">
         <nav class="navbar navbar-dark navbar-expand-md bg-primary justify-content-between">
             <a class="navbar-brand" href="index.php">
-                Ối dồi ôi
+                DMs Store
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>

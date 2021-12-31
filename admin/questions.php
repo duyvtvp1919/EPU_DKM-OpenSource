@@ -1,5 +1,6 @@
-<?php require '../conn.inc.php'; ?>
-
+<?php require '../conn.inc.php';
+require("config.php");
+?>
 <?php include 'header.php';?>
 <script>
     function show(id){
